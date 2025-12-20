@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Walmart Christmas Discount — $750</title>
+  <title>Walmart Christmas Discount — $1000</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,6 +21,8 @@
       --muted:#64748b;
       --good:#16a34a;
       --warn:#f59e0b;
+
+      --danger:#ef4444;
     }
 
     *{ box-sizing:border-box; }
@@ -248,21 +250,49 @@
       display:block;
       box-shadow:0 14px 28px rgba(2,6,23,.10);
     }
-    .value{
+
+    /* Price overlay: red $500 struck + $1000 */
+    .price-stack{
       position:absolute;
-      top:10px;
+      top:12px;
       left:12px;
-      color:#fff;
-      font-size:24px;
-      font-weight:800;
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      align-items:flex-start;
       text-shadow:0 2px 6px rgba(0,0,0,.45);
-      padding:0;
-      background:none;
+      user-select:none;
     }
-    .value sup{
-      font-size:13px;
+    .old-price{
+      color:var(--danger);
+      font-weight:900;
+      font-size:18px;
+      line-height:1;
+      position:relative;
+    }
+    .old-price::after{
+      content:"";
+      position:absolute;
+      left:-2px;
+      right:-2px;
+      top:50%;
+      height:2px;
+      background:var(--danger);
+      transform:translateY(-50%);
+      border-radius:2px;
+      opacity:.95;
+    }
+    .new-price{
+      color:#ffffff;
+      font-weight:900;
+      font-size:26px;
+      line-height:1.05;
+    }
+    .old-price sup, .new-price sup{
+      font-size:.62em;
       position:relative;
       top:-0.45em;
+      margin-right:1px;
     }
 
     .timer{
@@ -393,7 +423,7 @@
 
       <div class="topbar">
         <div class="pill"><span class="dot"></span> Walmart Christmas Discount</div>
-        <div class="pill"><span class="spark"></span> Limited-time holiday window</div>
+        <div class="pill"><span class="spark"></span> 2× bonus event • limited-time window</div>
       </div>
 
       <div class="grid">
@@ -401,13 +431,13 @@
         <div>
           <div class="hero">
             <div class="kicker">
-              <div class="tag">Holiday savings: <b>$750</b> Walmart Discount</div>
+              <div class="tag">Holiday bonus: <b>2× $500</b> = <b>$1000</b> Discount</div>
               <div class="pill"><span class="dot"></span> Fast-start • simple steps</div>
             </div>
 
-            <h1>Claim your <span>$750 Walmart Christmas Discount</span> in a few easy steps.</h1>
+            <h1>Unlock your <span>$1000 Walmart Christmas Discount</span> in a few easy steps.</h1>
             <p class="sub">
-              A limited-time holiday promotion designed to increase your savings. Start now, follow the steps,
+              A limited-time holiday promotion designed to boost your savings. Start now, follow the steps,
               and complete all required actions shown in the offer flow.
             </p>
 
@@ -463,7 +493,7 @@
               <li class="step">
                 <div class="num">4</div>
                 <div>
-                  <b>Receive your $750 Walmart Christmas Discount</b>
+                  <b>Receive your $1000 Walmart Christmas Discount</b>
                   <p>Processing typically occurs within 24–48 hours after verification.</p>
                 </div>
               </li>
@@ -493,7 +523,11 @@
         <aside class="side">
           <div class="cardbox">
             <div class="giftwrap">
-              <div class="value"><sup>$</sup>750</div>
+              <div class="price-stack" aria-label="Discount amount">
+                <div class="old-price"><sup>$</sup>500</div>
+                <div class="new-price"><sup>$</sup>1000</div>
+              </div>
+
               <img
                 src="https://www.mygiftcardsupply.com/wp-content/uploads/2022/01/Walmart-gift-card-online.png"
                 alt="Walmart gift card"
@@ -507,7 +541,7 @@
             </div>
 
             <a class="cta"
-               href="https://glctrk.org/aff_c?offer_id=3449&aff_id=122650&source=walmart2r"
+               href="https://trkfy.org/aff_c?offer_id=1377&aff_id=122650&source=walmart8r"
                target="_blank"
                rel="nofollow noopener">
               Claim Now
@@ -519,7 +553,7 @@
             </div>
 
             <div class="badges">
-              <div class="badge highlight">Christmas promo</div>
+              <div class="badge highlight">2× holiday boost</div>
               <div class="badge">Fast-start steps</div>
               <div class="badge">Mobile friendly</div>
             </div>
@@ -534,10 +568,10 @@
     <div class="row">
       <div class="mini">
         <strong>Walmart Christmas Discount</strong><br>
-        $750 offer window: <strong id="timer2">30:00</strong>
+        2× $500 → <strong>$1000</strong> • window: <strong id="timer2">30:00</strong>
       </div>
       <a class="cta"
-         href="https://glctrk.org/aff_c?offer_id=3449&aff_id=122650&source=walmart2r"
+         href="https://trkfy.org/aff_c?offer_id=1377&aff_id=122650&source=walmart8r"
          target="_blank"
          rel="nofollow noopener">
         Claim
@@ -569,4 +603,6 @@
   </script>
 </body>
 </html>
+
+
 
